@@ -81,9 +81,13 @@
                         <button onclick="switchPage('contact')" class="px-8 py-4 rounded-2xl glass-panel text-white font-semibold text-base hover:bg-white/10 transition border border-white/20">Let's Talk Business</button>
                     </div>
                 </div>
-<button onclick="switchPage('pricing')" id="nav-pricing" class="transition text-gray-300 hover:text-neon-cyan">Pricing</button>
-                
-                
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+  <button onclick="switchPage('home')" id="nav-home" class="transition text-neon-cyan">Home</button>
+  <button onclick="switchPage('work')" id="nav-work" class="transition text-gray-300 hover:text-neon-cyan">Portfolio</button>
+  <button onclick="switchPage('pricing')" id="nav-pricing" class="transition text-gray-300 hover:text-neon-cyan">Pricing</button>
+  <button onclick="switchPage('contact')" id="nav-contact" class="transition text-gray-300 hover:text-neon-cyan">Contact</button>
+                </nav>
+            
                 <!-- 3D Levitating Hero Element -->
                 <div class="relative flex justify-center">
                     <div class="absolute -inset-1 bg-gradient-to-r from-neon-cyan to-purple-600 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
