@@ -290,4 +290,65 @@
 
     <!-- Interactive JS: SPA Routing & Cosmic Starry/Snow Background Engine -->
     <script>
-        function 
+        function switchPage(pageId) {
+            document.querySelectorAll('.page-view').forEach(el => el.classList.add('hidden'));
+            document.getElementById('page-' + pageId).classList.remove('hidden');
+            
+            ['home', 'work', 'pricing', 'contact'].forEach(id => {
+                const btn = document.getElementById('nav-' + id);
+                if (btn) {
+                    btn.className = id === pageId ? 'transition text-neon-cyan font-bold' : 'transition text-gray-300 hover:text-neon-cyan';
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        const canvas = document.getElementById('cosmosCanvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        for (let i = 0; i < 150; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                radius: Math.random() * 1.8,
+                alpha: Math.random(),
+                speedY: Math.random() * 0.5 + 0.1,
+                isSnow: Math.random() > 0.4
+            });
+        }
+
+        function animateCosmos() {
+            ctx.clearRect(0, 0, width, height);
+            
+            particles.forEach(p => {
+                ctx.beginPath();
+                if (p.isSnow) {
+                    ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha * 0.8})`;
+                    ctx.arc(p.x, p.y, p.radius * 1.2, 0, Math.PI * 2);
+                } else {
+                    ctx.fillStyle = `rgba(0, 242, 254, ${p.alpha})`;
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                }
+                ctx.fill();
+
+                p.y += p.speedY;
+                if (p.y > height) {
+                    p.y = 0;
+                    p.x = Math.random() * width;
+                }
+            });
+            requestAnimationFrame(animateCosmos);
+        }
+        animateCosmos();
+    </script>
+</body>
+</html>
