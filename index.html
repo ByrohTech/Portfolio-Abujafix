@@ -74,7 +74,7 @@
             <button onclick="switchPage('contact')" id="nav-contact" class="transition text-gray-300 hover:text-neon-cyan">Contact</button>
         </nav>
         <div>
-            <button onclick="switchPage('contact')" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-neon-blue to-neon-cyan text-black font-bold text-sm shadow-lg shadow-neon-cyan/25 hover:scale-105 transition transform">Hire Us</button>
+            <button onclick="switchPage('pricing')" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-neon-blue to-neon-cyan text-black font-bold text-sm shadow-lg shadow-neon-cyan/25 hover:scale-105 transition transform">Hire Us</button>
         </div>
     </header>
 
@@ -97,7 +97,7 @@
                     </p>
                     <div class="flex flex-wrap gap-4 pt-2">
                         <button onclick="switchPage('work')" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-neon-blue to-neon-cyan text-black font-bold text-base shadow-xl shadow-neon-cyan/30 hover:scale-105 transition transform">Explore Our Work</button>
-                        <button onclick="switchPage('pricing')" class="px-8 py-4 rounded-2xl glass-panel text-white font-semibold text-base hover:bg-white/10 transition border border-white/20">View Pricing</button>
+                        <button onclick="switchPage('pricing')" class="px-8 py-4 rounded-2xl glass-panel text-white font-semibold text-base hover:bg-white/10 transition border border-white/20">View Pricing & Packages</button>
                     </div>
                 </div>
             
@@ -221,7 +221,7 @@
             </div>
         </section>
 
-        <!-- PAGE 4: PRICING -->
+        <!-- PAGE 4: PRICING (Direct Paystack Checkout Links) -->
         <section id="page-pricing" class="page-view hidden space-y-16 max-w-7xl mx-auto py-12">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-purple-300 mb-4">
@@ -233,7 +233,7 @@
 
             <!-- Pricing Cards Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Brochure Site -->
+                <!-- Brochure Site ($1,500 USD) -->
                 <div class="rounded-2xl bg-[#100b1e] p-8 border border-white/10 flex flex-col justify-between">
                     <div>
                         <h3 class="text-xl font-semibold text-white mb-2">Business Brochure Site</h3>
@@ -245,10 +245,11 @@
                             <li>✓ Contact Forms & Lead Capture</li>
                         </ul>
                     </div>
-                    <button onclick="switchPage('contact')" class="w-full py-3 rounded-xl bg-white/5 hover:bg-white/10 text-center font-semibold text-sm border border-white/10 text-white transition">Select Package</button>
+                    <!-- Replace '#' with your actual Paystack payment page URL for this package -->
+                    <a href="https://paystack.com/pay/abujafix-brochure" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-white/5 hover:bg-white/10 text-center font-semibold text-sm border border-white/10 text-white transition block">Proceed to Paystack ($1,500)</a>
                 </div>
 
-                <!-- E-Commerce / Booking -->
+                <!-- E-Commerce / Booking ($3,500 USD) -->
                 <div class="rounded-2xl bg-[#100b1e] p-8 border border-purple-500/50 shadow-xl flex flex-col justify-between relative">
                     <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-purple-600 text-xs font-semibold text-white uppercase tracking-wider">Most Popular</div>
                     <div>
@@ -257,14 +258,15 @@
                         <div class="text-4xl font-extrabold text-white mb-6">$3,500 <span class="text-sm font-medium text-slate-400">USD</span></div>
                         <ul class="space-y-3 mb-8 text-sm text-slate-300">
                             <li>✓ Everything in Brochure Site</li>
-                            <li>✓ Stripe & PayPal Payment Setup</li>
+                            <li>✓ Stripe & Paystack Payment Setup</li>
                             <li>✓ Automated Appointment Booking</li>
                         </ul>
                     </div>
-                    <button onclick="switchPage('contact')" class="w-full py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-center font-semibold text-sm text-white transition hover:opacity-90">Select Package</button>
+                    <!-- Replace '#' with your actual Paystack payment page URL for this package -->
+                    <a href="https://paystack.com/pay/abujafix-ecommerce" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-center font-semibold text-sm text-white transition hover:opacity-90 block">Proceed to Paystack ($3,500)</a>
                 </div>
 
-                <!-- Custom Web App -->
+                <!-- Custom Web App / MVP ($6,500 USD) -->
                 <div class="rounded-2xl bg-[#100b1e] p-8 border border-white/10 flex flex-col justify-between">
                     <div>
                         <h3 class="text-xl font-semibold text-white mb-2">Custom Web App / MVP</h3>
@@ -276,7 +278,8 @@
                             <li>✓ Scalable Architecture</li>
                         </ul>
                     </div>
-                    <button onclick="switchPage('contact')" class="w-full py-3 rounded-xl bg-white/5 hover:bg-white/10 text-center font-semibold text-sm border border-white/10 text-white transition">Select Package</button>
+                    <!-- Replace '#' with your actual Paystack payment page URL for this package -->
+                    <a href="https://paystack.com/pay/abujafix-webapp" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-white/5 hover:bg-white/10 text-center font-semibold text-sm border border-white/10 text-white transition block">Proceed to Paystack ($6,500)</a>
                 </div>
             </div>
         </section>
@@ -312,15 +315,21 @@
         &copy; 2026 Abujafix Solutions Limited. CEO: Emeka Precious Enyioha. All rights reserved.
     </footer>
 
-    <!-- Interactive JS: SPA Routing & Cosmic Starry/Snow Background Engine -->
+    <!-- Interactive JS: Robust SPA Routing & Cosmic Starry/Snow Background Engine -->
     <script>
         function switchPage(pageId) {
-            document.querySelectorAll('.page-view').forEach(el => el.classList.add('hidden'));
-            const targetPage = document.getElementById('page-' + pageId);
-            if (targetPage) {
-                targetPage.classList.remove('hidden');
+            // Hide all pages
+            document.querySelectorAll('.page-view').forEach(el => {
+                el.classList.add('hidden');
+            });
+            
+            // Show target page
+            const target = document.getElementById('page-' + pageId);
+            if (target) {
+                target.classList.remove('hidden');
             }
             
+            // Update active state on nav links
             ['home', 'about', 'work', 'pricing', 'contact'].forEach(id => {
                 const btn = document.getElementById('nav-' + id);
                 if (btn) {
